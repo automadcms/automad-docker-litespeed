@@ -1,4 +1,4 @@
-FROM litespeedtech/openlitespeed:1.8.4-lsphp84
+FROM litespeedtech/openlitespeed:1.9.4-lsphp85
 
 LABEL maintainer="Marc Anton Dahmen <https://marcdahmen.de>"
 
@@ -12,7 +12,7 @@ RUN curl -sS https://getcomposer.org/installer | \
 
 COPY config/httpd_config.conf /usr/local/lsws/conf/httpd_config.conf
 COPY config/vhconf.conf /usr/local/lsws/conf/vhosts/Example/vhconf.conf
-COPY config/php.ini /usr/local/lsws/lsphp84/etc/php/8.4/litespeed/php.ini
+COPY config/php.ini /usr/local/lsws/lsphp85/etc/php/8.5/litespeed/php.ini
 
 COPY init.sh /init.sh
 RUN chmod +x /init.sh
